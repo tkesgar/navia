@@ -8,12 +8,10 @@ function cwdFile(filePath: string) {
   return Bun.file(path.join(CWD, filePath))
 }
 
-describe('fixture: readme', () => {
-  it('should write expected README.md output', async () => {
-    await navia.write({
-      cwd: CWD
-    })
-
-    expect(await cwdFile('README.md').text()).toEqual(await cwdFile('README.md.expected').text())
+describe('fixture: config-throw-error', () => {
+  it('should handle importing config throws error', async () => {
+    await expect(navia.write({
+      cwd: './tests/fixtures/config-throw-error'
+    })).rejects.toThrowError("Oh noes")
   })
 })
