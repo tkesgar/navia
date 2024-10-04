@@ -1,11 +1,10 @@
 {
-  "name": "navia",
-  "module": "src/cli.ts",
+  "name": "@tkesgar/navia",
   "type": "module",
   "devDependencies": {
     "@types/bun": "latest"
   },
-  "peerDependencies": {
-    "typescript": "^5.0.0"
+  "dependencies": {
+    "handlebars": "^4.7.8"
   }
 }
